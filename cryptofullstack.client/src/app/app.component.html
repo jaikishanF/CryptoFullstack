@@ -1,0 +1,12 @@
+<h1>Crypto Details</h1>
+
+<div>
+  <input type="text" [(ngModel)]="cryptoName" placeholder="Enter cryptocurrency name">
+  <button (click)="getCryptoData()">Get Details</button>
+</div>
+
+<div *ngIf="data">
+  <p>Name: {{ data.name }}</p>
+  <p>Symbol: {{ data.symbol }}</p>
+  <p>Price: {{ data.price }}</p>
+</div>
